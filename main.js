@@ -81,32 +81,27 @@ const readInfoObj = posts.map((post)=> {
     console.log(mediaVal);
     console.log(authorNameVal);
     console.log(authorImageVal);
-});
 
-console.log(readInfoObj)
-
-//                        &
-
-// Utilizzare gli ID degli obj per generare i post
-const postGen = document.querySelector('#container');
-posts.forEach(element => {
+    // Utilizzare gli ID degli obj per generare i post
+    const postGen = document.querySelector('#container');
+   
 
     postGen.innerHTML += 
         `<div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione">                    
+                        <img class="profile-pic" src="${authorImageVal}" alt="Phil Mangione">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">Phil Mangione</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                        <div class="post-meta__author">${authorNameVal}</div>
+                        <div class="post-meta__time">${dateVal}</div>
                     </div>                    
                 </div>
             </div>
-            <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+            <div class="post__text">${contentVal}</div>
             <div class="post__image">
-                <img src="https://unsplash.it/600/300?image=171" alt="">
+                <img src="${mediaVal}" alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
@@ -122,7 +117,15 @@ posts.forEach(element => {
                 </div> 
             </div>            
         </div>`
+
+    
 });
+
+console.log(readInfoObj)
+
+//                        &
+
+
     // dopo aver generato i post, dobbiamo riempirli con le info degli obj
         // immagine profilo 
         // nome autore
