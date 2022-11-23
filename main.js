@@ -56,3 +56,17 @@ const posts = [
     }
 ];
 
+
+// scansionare tutti gli elementi nel array 'posts'
+// scansionare le proprietà degli obj contenuti negli array
+//                        &
+// Utilizzare gli ID degli obj per generare i post
+    // dopo aver generato i post, dobbiamo riempirli con le info degli obj
+        // immagine profilo 
+        // nome autore
+        // data del caricamento (molto semplice)
+        // descrizione post
+
+        // condiziomne
+            // SE (il post ha una immagine) {carica immagine}
+            // ALTRIMENTI {''}
